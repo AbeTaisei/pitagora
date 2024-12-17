@@ -8,7 +8,7 @@ boolean showExclamation = false;
 boolean redBallVisible = true;
 int ballSize = 80;
 float exclamationDelay = 0;
-float red_x, red_y, blue_x, blue_y;
+float red_x, red_y, blue_x, blue_y,bluck_x,bluck_y;
 float starOffsetX, starOffsetY; // 星形のオフセット（動き）
 float starRotation; // 星形の回転角度
 
