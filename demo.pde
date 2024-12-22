@@ -8,17 +8,17 @@ boolean showExclamation = false;
 boolean redBallVisible = true;
 int ballSize = 80;
 float exclamationDelay = 0;
-float red_x, red_y,bluck_x,bluck_y;
+float red_x, red_y, bluck_x, bluck_y;
 float starOffsetX, starOffsetY; // 星形のオフセット（動き）
 float starRotation; // 星形の回転角度
 float[][] hadouVertices; // ギザギザ形状の頂点を格納
 
 float scaleFactor1 = 5; // 初期スケール
-float scaleSpeed1 = 0.04; // スケールの変化速度
+float scaleSpeed1 = 0.06; // スケールの変化速度
 float boolValue = 0; // booleanの代わりに0か1の浮動小数点数を使用
 boolean isHadouActive1 = false; // ギザギザが表示中かどうか
 boolean isExpanding = false; // 拡大中か収縮中かを管理
-int rotationSpeed1 = 2; // 回転速度
+float rotationSpeed1 = 2; // 回転速度
 float hadouAngle1 = 0; // 回転角
 void setup() {
   fullScreen();
@@ -32,22 +32,23 @@ void setup() {
 
 void draw() {
   background(255);
-  
+
   if (isHadouActive1) {
     drawHadou(scaleFactor1, hadouAngle1, color(random(255), random(255), random(255), 100));
-    
+
     // 拡大・収縮の切り替え
     if (isExpanding) {
       scaleFactor1 += scaleSpeed1; // 拡大
       if (scaleFactor1 > 7.0) { // 最大値に達したら収縮開始
-        isExpanding = false;
+        scaleSpeed1 = 0;
       }
     } else {
-      scaleFactor1 -= 0;//scaleSpeed1; // 収縮
+      scaleSpeed1 = 0.04;
+      scaleFactor1 -= scaleSpeed1;//scaleSpeed1; // 収縮
       if (scaleFactor1 < 0.2) { // 最小値に達したら非表示
         isHadouActive1 = false;
       }
-    } 
+    }
     hadouAngle1 += rotationSpeed1; // 回転角度の更新
   }
   drawShapes(); // Shapes.pdeの関数で図形を描画
