@@ -149,11 +149,19 @@ void initAnimation() {
   seq.endStep();
   seq.beginStep();
   seq.add(Ani.to(this, 0.2, "TryY1", height*2, Ani.LINEAR));
-  seq.add(Ani.to(this, 0.4, 0.2, "TryY2",height*2, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, 0.2, "TryY2", height*2, Ani.LINEAR));
   seq.add(Ani.to(this, 0.6, 0.4, "TryY3", height*2, Ani.LINEAR));
   seq.add(Ani.to(this, 0.8, 0.6, "TryY4", height*2, Ani.LINEAR));
   seq.add(Ani.to(this, 1.0, 0.8, "TryY5", height*2, Ani.LINEAR));
   seq.endStep();
   seq.endSequence();
   // 円のアニメーションシーケンスを登録
+  seq2 = new AniSequence(this);
+  seq2.beginSequence();
+  seq.add(Ani.to(this, 0.000001, "red_x", -ballSize/2, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.000001, "red_y", height/4*3, Ani.LINEAR));
+  seq2.beginStep();
+  seq2.add(Ani.to(this, 0.4, "red_x", width/2-ballSize/2+8, Ani.LINEAR));
+  seq2.endStep();
+  seq2.endSequence();
 }
