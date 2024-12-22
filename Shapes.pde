@@ -3,7 +3,7 @@
 float boxX, boxY, boxWeight = 120, boxHeight = 100;
 float topCircleX, topCircleY;
 float circleSize = 200;
-float circleX1, circleY1, rotationAngle1, eye = 0, eyeX = 1000;//上の半円
+float circleX1, circleY1, rotationAngle1, eye = 0, eyeX = 1000,eyeY = 850;//上の半円
 //三角形の作成に必要な変数
 float angle1 = 0, angle2 = 0, angle3 = 0,angle4 = 0,angle5 = 0,angle6 = 0,angle7 = 0,angle8 = 0,angle9 = 0,angle10 = 0;
 float distanceRight1 = 1400, distanceRight2 = 1400, distanceRight3 = 1400;
@@ -13,7 +13,7 @@ boolean showCircles = false;
 float[][] starVertices;
 
 void initShapes() {//初期化
-  int numPoints = 20; // 頂点の数
+  int numPoints = 26; // 頂点の数
   float radiusOuter = 75; // 外側の頂点の半径
   float radiusInner = 55;  // 内側の頂点の半径
 
@@ -59,10 +59,6 @@ void drawStar(float x, float y, float rotation) {
 //主人公とその付近の関数
 void drawShapes() {
   // 最初の半円の描画
-  drawHalfCircle(circleX1, circleY1, 400, color(0), rotationAngle1);
-  fill(random(eye), random(eye), random(eye));
-  ellipse(eyeX, height/6*5, 40, 100);
-  ellipse(eyeX+150, height/6*5, 40, 100);
   fill(0);
   rect(boxX, boxY, boxWeight, boxHeight);
   ellipse(bluck_x, bluck_y, 1, 1);// 回転の中心
@@ -84,16 +80,11 @@ void drawShapes() {
     textSize(100);
     text("??", red_x - 15, red_y - ballSize - 100);
   }
-}
-
-//半円を作るための関数
-void drawHalfCircle(float x, float y, float radius, color fillColor, float rotation) {
-  pushMatrix();
-  translate(x, y);
-  rotate(rotation);
-  fill(fillColor);
-  arc(0, 0, radius * 2, radius * 2, 0, PI); // 半円を描画
-  popMatrix();
+  fill(0);
+  ellipse(circleX1, circleY1,800,800);
+  fill(random(eye), random(eye), random(eye));
+  ellipse(eyeX, eyeY, 40, 100);
+  ellipse(eyeX+150, eyeY, 40, 100);
 }
 void showExclamationMark() {
   showExclamation = false;

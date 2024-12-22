@@ -7,7 +7,11 @@ void reset() {
 }
  //seq.add(Ani.to(this, 2, "starOffsetY", height/2, Ani.LINEAR, "delay:1, onStart:showExclamationMark")); // 星を動かす
  //seq.add(Ani.to(this, 2, "starRotation", PI * 4, Ani.LINEAR)); // 星を回転させる
-void effect(){
+void effect1(){
   isHadouActive1 = true;
   isExpanding = true;
+}
+void effect2(){
+  isHadouActive1 = true;
+  isExpanding = false;
 }
