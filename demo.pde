@@ -1,7 +1,7 @@
 import processing.serial.*;
 import de.looksgood.ani.*;
 
-AniSequence seq;
+AniSequence seq,seq2;
 
 // 描画される円に関する変数
 boolean showExclamation = false;
@@ -56,7 +56,7 @@ void draw() {
 
 void mousePressed() {
   if (mouseButton == LEFT) {
-    reset();
+    seq2.start(); // アニメーションを開始
   } else if (mouseButton == RIGHT) {
     seq.start(); // アニメーションを開始
   }
