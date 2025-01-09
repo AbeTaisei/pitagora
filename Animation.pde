@@ -6,7 +6,7 @@ void initAnimation() {
   seq = new AniSequence(this);
   seq.beginSequence();
   seq.beginStep();
-  seq.add(Ani.to(this, 2.5, "red_y", height - ballSize/2-100, Ani.BOUNCE_OUT));
+  seq.add(Ani.to(this, 1.5, "red_y", height - ballSize/2-100, Ani.BOUNCE_OUT));
   seq.endStep();
 
   // step 1
@@ -19,31 +19,31 @@ void initAnimation() {
   // step 1
   seq.beginStep();
   seq.add(Ani.to(this, 0.2, "TryX1", width/2, Ani.LINEAR));
-  seq.add(Ani.to(this, 0.2, "TryY1", height/3, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.2, "TryY1", height/3-100, Ani.LINEAR));
   seq.add(Ani.to(this, 0.2, "angle1", PI, Ani.LINEAR));
   seq.add(Ani.to(this, 0.4, 0.2, "TryX2", width/2+80, Ani.LINEAR));
-  seq.add(Ani.to(this, 0.4, 0.2, "TryY2", height/4, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, 0.2, "TryY2", height/4-100, Ani.LINEAR));
   seq.add(Ani.to(this, 0.4, 0.2, "angle2", PI*2, Ani.LINEAR));
   seq.add(Ani.to(this, 0.6, 0.4, "TryX3", width/2+160, Ani.LINEAR));
-  seq.add(Ani.to(this, 0.6, 0.4, "TryY3", height/3, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.6, 0.4, "TryY3", height/3-100, Ani.LINEAR));
   seq.add(Ani.to(this, 0.6, 0.4, "angle3", PI, Ani.LINEAR));
   seq.add(Ani.to(this, 0.8, 0.6, "TryX4", width/2+240, Ani.LINEAR));
-  seq.add(Ani.to(this, 0.8, 0.6, "TryY4", height/4, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.8, 0.6, "TryY4", height/4-100, Ani.LINEAR));
   seq.add(Ani.to(this, 0.8, 0.6, "angle4", PI*2, Ani.LINEAR));
   seq.add(Ani.to(this, 1.0, 0.8, "TryX5", width/2+320, Ani.LINEAR));
-  seq.add(Ani.to(this, 1.0, 0.8, "TryY5", height/3, Ani.LINEAR));
+  seq.add(Ani.to(this, 1.0, 0.8, "TryY5", height/3-100, Ani.LINEAR));
   seq.add(Ani.to(this, 1.0, 0.8, "angle5", PI, Ani.LINEAR));
   //seq.add(Ani.to(this, 2, "bluck_y", height/2, Ani.LINEAR, " onStart:showExclamationMark")); // 星を動かす
   seq.add(Ani.to(this, 2, "boxY", height, Ani.LINEAR));
   seq.endStep();
   seq.beginStep();
-  seq.add(Ani.to(this, 0.3, 0.1, "TryX1", width/4, Ani.EXPO_IN));
+  seq.add(Ani.to(this, 0.3, 0.1, "TryX1", width/4+20, Ani.EXPO_IN));
   seq.add(Ani.to(this, 0.3, 0.1, "TryY1", height, Ani.BACK_IN));
   seq.add(Ani.to(this, 0.3, 0.1, "angle1", -3, Ani.EXPO_IN));
-  seq.add(Ani.to(this, 1.8, 0.3, "red_x", width/7, Ani.CIRC_IN_OUT));
-  seq.add(Ani.to(this, 0.3, 2, "TryX2", 0, Ani.BACK_IN));
-  seq.add(Ani.to(this, 0.3, 2, "TryY2", height/4*3, Ani.LINEAR));
-  seq.add(Ani.to(this, 0.3, 2, "angle2", -1, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, 0.3, "red_x", width/7, Ani.CIRC_OUT));
+  seq.add(Ani.to(this, 0.3, 1, "TryX2", 0, Ani.BACK_IN));
+  seq.add(Ani.to(this, 0.3, 1, "TryY2", height/4*3, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.3, 1, "angle2", -1, Ani.LINEAR));
   seq.endStep();
   //球がジャンプして球がいた位置に三角形の攻撃を飛ばす。
   seq.beginStep();
@@ -93,13 +93,13 @@ void initAnimation() {
   seq.add(Ani.to(this, 0.4, 1, "red_y", ballSize, Ani.QUAD_OUT));
   seq.endStep();
   seq.beginStep();
-  seq.add(Ani.to(this, 0.4, "red_x", width/3+ballSize/2, Ani.LINEAR));
-  seq.add(Ani.to(this, 0.4, "red_y", height/3+ballSize-5, Ani.QUAD_OUT));
-  seq.add(Ani.to(this, 0.4, "bluck_x", width/9*4, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, "red_x", width/3*2-ballSize, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, "red_y", height/3+ballSize-5, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, "bluck_x", width/10*7, Ani.LINEAR));
   seq.add(Ani.to(this, 0.4, "bluck_y", height/10*7+ballSize-10, Ani.BACK_IN));
-  seq.add(Ani.to(this, 0.4, "circleX1", width/9*4, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, "circleX1", width/10*7, Ani.LINEAR));
   seq.add(Ani.to(this, 0.4, "circleY1", height/4*3+ballSize-10, Ani.BACK_IN));
-  seq.add(Ani.to(this, 0.4, "eyeX", width/3, Ani.LINEAR));
+  seq.add(Ani.to(this, 0.4, "eyeX", width/3*2-60, Ani.LINEAR));
   seq.add(Ani.to(this, 0.4, "eyeY", height/20*11, Ani.BACK_IN));
   seq.endStep();
   seq.beginStep();
@@ -184,12 +184,21 @@ void initAnimation() {
   seq2.add(Ani.to(this, 0.1, "starRotation", -12, Ani.QUAD_OUT));
   seq2.endStep();
   seq2.beginStep();
-  seq2.add(Ani.to(this, 0.6,1, "red_x", width-ballSize/2, Ani.LINEAR));
-  seq2.add(Ani.to(this, 0.6,1, "red_y", 200, Ani.QUAD_OUT));
+  seq2.add(Ani.to(this, 0.6, 1, "red_x", width-ballSize/2, Ani.LINEAR));
+  seq2.add(Ani.to(this, 0.6, 1, "red_y", 200, Ani.QUAD_OUT));
   seq2.endStep();
   seq2.beginStep();
-  seq2.add(Ani.to(this, 1.4, "red_x", -ballSize, Ani.QUAD_OUT));
-  seq2.add(Ani.to(this, 1.4, "red_y", height/4*3-ballSize*2, Ani.QUAD_IN_OUT));
+  seq2.add(Ani.to(this, 1.4, "red_x", ballSize/2, Ani.QUAD_OUT));
+  seq2.add(Ani.to(this, 1.4, "red_y", height/2-ballSize, Ani.QUAD_IN_OUT));
+  seq2.endStep();
+  seq2.beginStep();
+  seq2.add(Ani.to(this, 1.4, "red_x", -width/4, Ani.QUAD_OUT, "onStart:moveServo1"));
   seq2.endStep();
   seq2.endSequence();
+  seq3 = new AniSequence(this);
+  seq3.beginSequence();
+  seq3.beginStep();
+  seq3.add(Ani.to(this, 0.00001, "red_x", red_x, Ani.QUAD_OUT, "onStart:moveServo2"));
+  seq3.endStep();
+  seq3.endSequence();
 }

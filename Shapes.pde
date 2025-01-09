@@ -27,12 +27,12 @@ void initShapes() {//初期化
   }
   bluck_x = width/7*5;
   bluck_y = height ;//最初の□
-  red_x = width / 6;
+  red_x = width / 4+ballSize/2;
   red_y = -ballSize / 2;//赤い球
   circleX1 = width/7*5;
   circleY1 = height;
   rotationAngle1 = PI; // 最初の半円の初期設定
-  boxX = width / 8;
+  boxX = width / 4;
   boxY = height - 100;
   starVertices = new float[][] {
     {0, -50}, {14, -20}, {47, -15}, {23, 7}, {29, 40},
